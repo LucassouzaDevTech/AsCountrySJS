@@ -121,3 +121,17 @@ document.addEventListener("DOMContentLoaded", () => {
   showPage("home");
   console.log("✅ Navegação inicializada");
 });
+
+// Função especial para menu mobile - fecha IMEDIATAMENTE
+window.mobileNav = function(pageName) {
+  // Fecha o menu mobile instantaneamente
+  const menu = document.getElementById('mm');
+  if (menu) {
+    menu.classList.remove('open');
+  }
+  
+  // Navega para a página
+  showPage(pageName);
+  
+  return false;
+};
