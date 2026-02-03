@@ -84,31 +84,15 @@
         >✕</span
       >
       <div class="mobile-menu-content">
-        <a
-          href="#"
-          onclick="showPage('home'); document.getElementById('mm').classList.remove('open'); return false;"
-          >Início</a
-        >
-        <a
-          href="#"
-          onclick="showPage('produtos'); document.getElementById('mm').classList.remove('open'); return false;"
-          >Produtos</a
-        >
-        <a
-          href="#"
-          onclick="showPage('sobre'); document.getElementById('mm').classList.remove('open'); return false;"
-          >Sobre</a
-        >
-        <a
-          href="#"
-          onclick="showPage('contato'); document.getElementById('mm').classList.remove('open'); return false;"
-          >Contato</a
-        >
+        <a href="#" onclick="return mobileNav('home');">Início</a>
+        <a href="#" onclick="return mobileNav('produtos');">Produtos</a>
+        <a href="#" onclick="return mobileNav('sobre');">Sobre</a>
+        <a href="#" onclick="return mobileNav('contato');">Contato</a>
         <a 
           href="https://wa.me/5543999056364" 
           target="_blank"
           class="menu-whatsapp-btn"
-          onclick="setTimeout(() => document.getElementById('mm').classList.remove('open'), 300);"
+          onclick="document.getElementById('mm').classList.remove('open');"
         >
           <i class="fab fa-whatsapp"></i>
           WhatsApp
