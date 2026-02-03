@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AS Country | Loja Country em São Jerônimo da Serra</title>
-
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,13 +12,13 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-
+    
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
+    
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -35,42 +35,34 @@
         <div class="nav-links">
           <a
             href="#"
-            onclick="
-              showPage('home');
-              return false;
-            "
+            onclick="showPage('home'); return false;"
             class="active"
           >
             Início
           </a>
           <a
             href="#"
-            onclick="
-              showPage('produtos');
-              return false;
-            "
+            onclick="showPage('produtos'); return false;"
           >
             Produtos
           </a>
           <a
             href="#"
-            onclick="
-              showPage('sobre');
-              return false;
-            "
+            onclick="showPage('sobre'); return false;"
           >
             Sobre
           </a>
           <a
             href="#"
-            onclick="
-              showPage('contato');
-              return false;
-            "
+            onclick="showPage('contato'); return false;"
           >
             Contato
           </a>
-          <a href="https://wa.me/5543999056364" target="_blank" class="nav-cta">
+          <a
+            href="https://wa.me/5543999056364"
+            target="_blank"
+            class="nav-cta"
+          >
             WhatsApp
           </a>
         </div>
@@ -85,49 +77,43 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mm">
+    <div class="mobile-menu" id="mm" onclick="if(event.target.id === 'mm') this.classList.remove('open');">
       <span
         class="close-btn"
         onclick="document.getElementById('mm').classList.remove('open')"
         >✕</span
       >
-      <a
-        href="#"
-        onclick="
-          showPage('home');
-          document.getElementById('mm').classList.remove('open');
-          return false;
-        "
-        >Início</a
-      >
-      <a
-        href="#"
-        onclick="
-          showPage('produtos');
-          document.getElementById('mm').classList.remove('open');
-          return false;
-        "
-        >Produtos</a
-      >
-      <a
-        href="#"
-        onclick="
-          showPage('sobre');
-          document.getElementById('mm').classList.remove('open');
-          return false;
-        "
-        >Sobre</a
-      >
-      <a
-        href="#"
-        onclick="
-          showPage('contato');
-          document.getElementById('mm').classList.remove('open');
-          return false;
-        "
-        >Contato</a
-      >
-      <a href="https://wa.me/5543999056364" target="_blank">WhatsApp</a>
+      <div class="mobile-menu-content">
+        <a
+          href="#"
+          onclick="showPage('home'); document.getElementById('mm').classList.remove('open'); return false;"
+          >Início</a
+        >
+        <a
+          href="#"
+          onclick="showPage('produtos'); document.getElementById('mm').classList.remove('open'); return false;"
+          >Produtos</a
+        >
+        <a
+          href="#"
+          onclick="showPage('sobre'); document.getElementById('mm').classList.remove('open'); return false;"
+          >Sobre</a
+        >
+        <a
+          href="#"
+          onclick="showPage('contato'); document.getElementById('mm').classList.remove('open'); return false;"
+          >Contato</a
+        >
+        <a 
+          href="https://wa.me/5543999056364" 
+          target="_blank"
+          class="menu-whatsapp-btn"
+          onclick="setTimeout(() => document.getElementById('mm').classList.remove('open'), 300);"
+        >
+          <i class="fab fa-whatsapp"></i>
+          WhatsApp
+        </a>
+      </div>
     </div>
 
     <!-- PAGE: HOME -->
@@ -147,12 +133,7 @@
           </div>
 
           <div class="logo-container">
-            <img
-              src="uploads/logo.png"
-              alt="AS Country"
-              class="hero-logo"
-              onerror="this.style.display = 'none'"
-            />
+            <img src="uploads/logo.png" alt="AS Country" class="hero-logo" onerror="this.style.display='none'" />
           </div>
 
           <h1>
@@ -161,18 +142,14 @@
           </h1>
 
           <p class="hero-sub">
-            Loja country especializada em botas, chapéus, roupas e
-            acessórios.<br />
+            Loja country especializada em botas, chapéus, roupas e acessórios.<br>
             Qualidade, tradição e atendimento direto em São Jerônimo da Serra.
           </p>
 
           <div class="hero-actions">
             <a
               href="#"
-              onclick="
-                showPage('produtos');
-                return false;
-              "
+              onclick="showPage('produtos'); return false;"
               class="btn btn--gold"
             >
               <i class="fas fa-shopping-bag"></i>
@@ -221,10 +198,7 @@
                 <div class="highlight-card">
                   <div
                     class="highlight-card-inner"
-                    onclick="
-                      showPage('produtos');
-                      filterCategory('botas');
-                    "
+                    onclick="showPage('produtos'); filterCategory('botas');"
                   >
                     <div class="highlight-image">
                       <img
@@ -251,10 +225,7 @@
                 <div class="highlight-card">
                   <div
                     class="highlight-card-inner"
-                    onclick="
-                      showPage('produtos');
-                      filterCategory('chapeus');
-                    "
+                    onclick="showPage('produtos'); filterCategory('chapeus');"
                   >
                     <div class="highlight-image">
                       <img
@@ -281,10 +252,7 @@
                 <div class="highlight-card">
                   <div
                     class="highlight-card-inner"
-                    onclick="
-                      showPage('produtos');
-                      filterCategory('camisas');
-                    "
+                    onclick="showPage('produtos'); filterCategory('camisas');"
                   >
                     <div class="highlight-image">
                       <img
@@ -311,10 +279,7 @@
                 <div class="highlight-card">
                   <div
                     class="highlight-card-inner"
-                    onclick="
-                      showPage('produtos');
-                      filterCategory('cintos');
-                    "
+                    onclick="showPage('produtos'); filterCategory('cintos');"
                   >
                     <div class="highlight-image">
                       <img
@@ -341,10 +306,7 @@
                 <div class="highlight-card">
                   <div
                     class="highlight-card-inner"
-                    onclick="
-                      showPage('produtos');
-                      filterCategory('calcas');
-                    "
+                    onclick="showPage('produtos'); filterCategory('calcas');"
                   >
                     <div class="highlight-image">
                       <img
@@ -371,10 +333,7 @@
                 <div class="highlight-card">
                   <div
                     class="highlight-card-inner"
-                    onclick="
-                      showPage('produtos');
-                      filterCategory('acessorios');
-                    "
+                    onclick="showPage('produtos'); filterCategory('acessorios');"
                   >
                     <div class="highlight-image">
                       <img
@@ -408,30 +367,110 @@
 
             <!-- Indicadores -->
             <div class="carousel-indicators">
-              <span
-                class="indicator-dot active"
-                onclick="goToHighlightSlide(0)"
-              ></span>
-              <span
-                class="indicator-dot"
-                onclick="goToHighlightSlide(1)"
-              ></span>
-              <span
-                class="indicator-dot"
-                onclick="goToHighlightSlide(2)"
-              ></span>
-              <span
-                class="indicator-dot"
-                onclick="goToHighlightSlide(3)"
-              ></span>
-              <span
-                class="indicator-dot"
-                onclick="goToHighlightSlide(4)"
-              ></span>
-              <span
-                class="indicator-dot"
-                onclick="goToHighlightSlide(5)"
-              ></span>
+              <span class="indicator-dot active" onclick="goToHighlightSlide(0)"></span>
+              <span class="indicator-dot" onclick="goToHighlightSlide(1)"></span>
+              <span class="indicator-dot" onclick="goToHighlightSlide(2)"></span>
+              <span class="indicator-dot" onclick="goToHighlightSlide(3)"></span>
+              <span class="indicator-dot" onclick="goToHighlightSlide(4)"></span>
+              <span class="indicator-dot" onclick="goToHighlightSlide(5)"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE NÓS (na Home) -->
+      <section class="section about-home-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="label">
+              <div class="line"></div>
+              <span>Nossa História</span>
+            </div>
+            <h2>SOBRE NÓS</h2>
+            <p>Conheça a AsCountry e nossa tradição country</p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-left reveal">
+              <h3>
+                TRADIÇÃO<br />CONSTRUÍDA <span class="gold">COM PAIXÃO</span>
+              </h3>
+              <p>
+                A AsCountry é uma loja física localizada em São Jerônimo da
+                Serra – PR. Atuamos com foco em produtos de qualidade,
+                atendimento direto e confiança.
+              </p>
+              <p>
+                Nosso objetivo é levar o verdadeiro estilo country para quem
+                vive o campo e para quem carrega essa identidade no dia a dia.
+                Trabalhamos com as melhores marcas e produtos selecionados.
+              </p>
+              
+              <div class="about-features">
+                <div class="feature-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Produtos de Alta Qualidade</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Atendimento Personalizado</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Tradição Country Autêntica</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Variedade de Produtos</span>
+                </div>
+              </div>
+              
+              <div class="cta-row">
+                <a
+                  href="https://wa.me/5543999056364"
+                  target="_blank"
+                  class="btn btn--gold"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                  Falar Conosco
+                </a>
+                <a
+                  href="#"
+                  onclick="showPage('produtos'); return false;"
+                  class="btn btn--outline"
+                >
+                  <i class="fas fa-shopping-bag"></i>
+                  Ver Produtos
+                </a>
+              </div>
+            </div>
+
+            <div class="about-right reveal">
+              <div class="about-image">
+                <img src="uploads/loja.png" alt="Fachada da loja AsCountry" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><i class=\'fas fa-store\'></i><p>AsCountry</p></div>'" />
+              </div>
+              <div class="about-info-grid">
+                <div class="info-card">
+                  <div class="info-icon">📍</div>
+                  <h4>Localização</h4>
+                  <p>Rua Cláudio Ferreira da Costa, nº 149<br>São Jerônimo da Serra - PR</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-icon">🕐</div>
+                  <h4>Horário</h4>
+                  <p>Segunda a Sexta<br>09:00 às 18:00</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-icon">📞</div>
+                  <h4>Telefone</h4>
+                  <p>(43) 99905-6364</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-icon">📸</div>
+                  <h4>Instagram</h4>
+                  <p>@as.country_ofc</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -456,10 +495,7 @@
             </a>
             <a
               href="#"
-              onclick="
-                showPage('contato');
-                return false;
-              "
+              onclick="showPage('contato'); return false;"
               class="btn btn--outline"
             >
               📍 Ver Endereço
@@ -583,7 +619,7 @@
                 vive o campo e para quem carrega essa identidade no dia a dia.
                 Trabalhamos com as melhores marcas e produtos selecionados.
               </p>
-
+              
               <div class="about-features">
                 <div class="feature-item">
                   <i class="fas fa-check-circle"></i>
@@ -602,7 +638,7 @@
                   <span>Variedade de Produtos</span>
                 </div>
               </div>
-
+              
               <div class="cta-row">
                 <a
                   href="https://wa.me/5543999056364"
@@ -614,10 +650,7 @@
                 </a>
                 <a
                   href="#"
-                  onclick="
-                    showPage('produtos');
-                    return false;
-                  "
+                  onclick="showPage('produtos'); return false;"
                   class="btn btn--outline"
                 >
                   <i class="fas fa-shopping-bag"></i>
@@ -628,28 +661,18 @@
 
             <div class="about-right reveal">
               <div class="about-image">
-                <img
-                  src="uploads/loja.png"
-                  alt="Fachada da loja AsCountry"
-                  onerror="
-                    this.parentElement.innerHTML =
-                      '<div class=\'image-placeholder\'><i class=\'fas fa-store\'></i><p>AsCountry</p></div>'
-                  "
-                />
+                <img src="uploads/loja.png" alt="Fachada da loja AsCountry" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><i class=\'fas fa-store\'></i><p>AsCountry</p></div>'" />
               </div>
               <div class="about-info-grid">
                 <div class="info-card">
                   <div class="info-icon">📍</div>
                   <h4>Localização</h4>
-                  <p>
-                    Rua Cláudio Ferreira da Costa, nº 149<br />São Jerônimo da
-                    Serra - PR
-                  </p>
+                  <p>Rua Cláudio Ferreira da Costa, nº 149<br>São Jerônimo da Serra - PR</p>
                 </div>
                 <div class="info-card">
                   <div class="info-icon">🕐</div>
                   <h4>Horário</h4>
-                  <p>Segunda a Sexta<br />09:00 às 18:00</p>
+                  <p>Segunda a Sexta<br>09:00 às 18:00</p>
                 </div>
                 <div class="info-card">
                   <div class="info-icon">📞</div>
@@ -682,10 +705,7 @@
                 <span>Fale com Nós</span>
               </div>
               <h2>VAMOS<br />CONVERSAR?</h2>
-              <p>
-                Entre em contato conosco e tire suas dúvidas sobre produtos,
-                horários e disponibilidade.
-              </p>
+              <p>Entre em contato conosco e tire suas dúvidas sobre produtos, horários e disponibilidade.</p>
             </div>
           </div>
 
@@ -697,8 +717,8 @@
                   <div>
                     <div class="ci-label">Endereço Completo</div>
                     <div class="ci-value">
-                      Rua Cláudio Ferreira da Costa, nº 149<br />São Jerônimo da
-                      Serra, PR
+                      Rua Cláudio Ferreira da Costa, nº 149<br />São Jerônimo
+                      da Serra, PR
                     </div>
                   </div>
                 </div>
@@ -707,8 +727,8 @@
                   <div>
                     <div class="ci-label">Telefone / WhatsApp</div>
                     <div class="ci-value">
-                      <a href="tel:+5543999056364">(43) 99905-6364</a><br />
-                      <small style="opacity: 0.7">Clique para ligar</small>
+                      <a href="tel:+5543999056364">(43) 99905-6364</a><br>
+                      <small style="opacity: 0.7;">Clique para ligar</small>
                     </div>
                   </div>
                 </div>
@@ -719,10 +739,8 @@
                     <div class="ci-value">
                       <a href="https://wa.me/5543999056364" target="_blank"
                         >Enviar mensagem agora</a
-                      ><br />
-                      <small style="opacity: 0.7"
-                        >Resposta rápida garantida</small
-                      >
+                      ><br>
+                      <small style="opacity: 0.7;">Resposta rápida garantida</small>
                     </div>
                   </div>
                 </div>
@@ -735,10 +753,8 @@
                         href="https://www.instagram.com/as.country_ofc/"
                         target="_blank"
                         >@as.country_ofc</a
-                      ><br />
-                      <small style="opacity: 0.7"
-                        >Acompanhe novidades e promoções</small
-                      >
+                      ><br>
+                      <small style="opacity: 0.7;">Acompanhe novidades e promoções</small>
                     </div>
                   </div>
                 </div>
@@ -748,10 +764,8 @@
                     <div class="ci-label">Horário de Funcionamento</div>
                     <div class="ci-value">
                       <strong>Segunda a Sexta</strong><br />
-                      09:00 às 18:00<br />
-                      <small style="opacity: 0.7"
-                        >Sábados e domingos fechado</small
-                      >
+                      09:00 às 18:00<br>
+                      <small style="opacity: 0.7;">Sábados e domingos fechado</small>
                     </div>
                   </div>
                 </div>
@@ -764,10 +778,7 @@
                   <i class="fab fa-whatsapp"></i>
                 </div>
                 <h3>Tire suas dúvidas agora!</h3>
-                <p>
-                  Fale conosco pelo WhatsApp e receba atendimento personalizado
-                  em minutos.
-                </p>
+                <p>Fale conosco pelo WhatsApp e receba atendimento personalizado em minutos.</p>
                 <a
                   href="https://wa.me/5543999056364"
                   target="_blank"
@@ -800,9 +811,8 @@
               <div class="contact-notice">
                 <i class="fas fa-info-circle"></i>
                 <p>
-                  <strong>Atendimento Local:</strong> Nossa loja está localizada
-                  em São Jerônimo da Serra - PR. Atendemos presencialmente ou
-                  via WhatsApp para pedidos e orçamentos.
+                  <strong>Atendimento Local:</strong> Nossa loja está localizada em São
+                  Jerônimo da Serra - PR. Atendemos presencialmente ou via WhatsApp para pedidos e orçamentos.
                 </p>
               </div>
             </div>
